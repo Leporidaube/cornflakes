@@ -1,0 +1,26 @@
+  # Package configuration
+
+  # State everything you want installed in the next build here
+  # Packages ==> https://search.nixos.org/ 
+
+{ config, lib, pkgs, ... }:
+
+{
+  programs.firefox.enable = true;
+  environment.systemPackages = with pkgs; [
+    wget
+    git
+    superfile
+    kdePackages.dolphin
+    kitty
+    neovim
+    waybar
+    quickshell 
+    vesktop
+    inkscape-with-extensions
+  ];
+
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+  
+}
