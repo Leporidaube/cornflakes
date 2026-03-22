@@ -7,13 +7,24 @@
       enable = true;
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = false;
+      gamescopeSession.enable = true;
     };
 
     # Lutris
     environment.systemPackages = with pkgs; [
       lutris
+      gamemode
     ];
-    # Required for 32-bit games
-    hardware.graphics.enable32Bit = true;
+
+    # Steam hardware acceleration
+    hardware.graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
+
+    # Compatibility tools
+    environment.sessionVariables = {
+      STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/ram/.steam/root/compatibilitytools.d";
+    };
   };
 }

@@ -13,10 +13,13 @@
     };
 
     # Disable PulseAudio    
-    hardware.pulseaudio.enable = false;
+    services.pulseaudio.enable = false;
 
     # Audio optimization
     security.rtkit.enable = true;
+
+    # MPRIS
+    services.playerctld.enable = true;
     
   };
 }

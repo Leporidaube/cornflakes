@@ -17,8 +17,11 @@
     services.getty.autologinUser = username;
 
     home-manager = {
+      useUserPackages = true;
+      useGlobalPkgs = true;
+      backupFileExtension = "bak";
       extraSpecialArgs = { inherit inputs; };
-      users.${username} = import ./ram-home.nix;
+      users.${username} = import ./_ram-home.nix;
     };
   };
 }

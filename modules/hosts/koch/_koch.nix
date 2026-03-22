@@ -4,7 +4,7 @@
 {
   flake.nixosConfigurations.sier = inputs.nixpkgs.lib.nixosSystem {
     modules = with config.flake.modules.nixos; [
-      ./hardware-configuration.nix
+      ./_hardware-configuration.nix
       inputs.home-manager.nixosModules.default
       { networking.hostName = "koch"; }
       ram

@@ -6,6 +6,7 @@
     environment.systemPackages = with pkgs; [
      inkscape-with-extensions
      krita
+     win2xcur
     ];
   };
 }

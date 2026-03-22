@@ -12,7 +12,5 @@
       enable = true;
       nssmdns4 = true;
     };
-
-    programs.cups-pdf.enable = true;
   };
 }

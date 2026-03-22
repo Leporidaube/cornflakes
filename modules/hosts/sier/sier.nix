@@ -10,13 +10,17 @@
     };
 
     modules = with config.flake.modules.nixos; [
-      ./hardware-configuration.nix
+      ./_hardware-configuration.nix
       inputs.home-manager.nixosModules.default
-      { networking.hostName = "sier"; }
+      { 
+        networking.hostName = "sier";
+        system.stateVersion = "25.11";
+      }
       ram
       boot
       store
       audio
+      audiofix
       bluetooth
       ethernet
       print
