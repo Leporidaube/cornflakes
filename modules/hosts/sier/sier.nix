@@ -11,6 +11,7 @@
 
     modules = with config.flake.modules.nixos; [
       ./_hardware-configuration.nix
+      ./_disko.nix
       inputs.home-manager.nixosModules.default
       { 
         networking.hostName = "sier";
