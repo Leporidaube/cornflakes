@@ -19,19 +19,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # end4-hypr
-    dotfiles = {
-      url = "git+https://github.com/end-4/dots-hyprland?submodules=1";
-      flake = false;
-    };
-
-    illogical-flake = {
-      url = "github:soymou/illogical-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.dotfiles.follows = "dotfiles";
-    }; 
-
-    # zen-browser
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs = {
@@ -40,7 +27,6 @@
       };
     };
 
-    # spicetify
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
