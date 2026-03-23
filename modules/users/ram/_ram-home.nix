@@ -41,7 +41,8 @@ in
           Fingerprinting = true;
         };
       };
- 
+
+    # zen mods
     profiles.default = {
       mods = [
         "f4866f39-cfd6-4498-ab92-54213b8279dc"  # Animations+
@@ -125,6 +126,7 @@ in
     preset = "FFLG"; 
   };
 
+  # enable bash + add easter egg :D
   programs.bash = {
     enable = true;
     shellAliases.hi = "Hiii"; 
