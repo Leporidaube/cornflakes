@@ -96,7 +96,7 @@ in
           owner = "ivLis-Studio";
           repo = "ivLyrics";
           rev = "main";
-          hash = "sha256-+aSLtjcxvdklrc4EggpEnraI0hROum+fgjHc1Gy4ws8=";
+          hash = "sha256-R/w5YvCp1Yg/BIxbi6RoTAPtL0372hZ+kzYpnCY/Scu=";
         };
         name = "ivLyrics";
       }
