@@ -1,9 +1,7 @@
-  # modules/hosts/sier/disko.nix
+  # modules/hosts/sier/_disko.nix
 
-  { inputs, ... }:
+  { ... }:
 {
-  imports = [ inputs.disko.nixosModules.disko ];
-
   disko.devices = {
     disk.main = {
       type = "disk";
