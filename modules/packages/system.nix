@@ -10,7 +10,9 @@
       man
       wikiman
       yazi
-      neovim
+      vim
+      busybox
+      alejandra
     ];
   };
 }
