@@ -7,7 +7,7 @@
     
       # Audio
       cava
-      pavucontrol-qt
+      lxqt.pavucontrol-qt
       playerctl
       libdbusmenu-gtk3
       
