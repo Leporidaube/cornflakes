@@ -11,7 +11,6 @@
       wikiman
       yazi
       vim
-      nautilus
       busybox
       alejandra
     ];
