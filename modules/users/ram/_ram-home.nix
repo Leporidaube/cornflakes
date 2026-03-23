@@ -3,21 +3,6 @@
   { inputs, pkgs, ... }:
   let
     username = "ram";
-
-  mactahoe = pkgs.stdenvNoCC.mkDerivation {
-    name = "mactahoe-icon-theme";
-    src = pkgs.fetchFromGitHub {
-      owner = "vinceliuice";
-      repo = "MacTahoe-icon-theme";
-      rev = "main";
-      hash = "sha256-a21zLinYTG6fpdQhKcn/3GzVUKd0bQOnY74609C5I7k=";
-    };
-
-    nativeBuildInputs = with pkgs; [ gtk3 sassc hicolor-icon-theme ];
-    installPhase = ''
-      mkdir -p $out/share/icons
-      HOME=$TMPDIR bash install.sh -d $out/share/icons
-    '';
   };
 in
 {
@@ -40,31 +25,10 @@ in
     };
   }; 
 
-  # tahoe icons
-  gtk = {
-    enable = true;
-    theme = {
-      name = "adw-gtk3";
-      package = pkgs.adw-gtk3;
-    };
-    iconTheme = {
-      name = "MacTahoe";
-      package = mactahoe;
-    };
-  };
-
-  dconf.settings = {
-    "org/gnome/desktop/interface" = {
-      color-scheme = "default";
-      gtk-theme = "adw-gtk3";
-      icon-theme = "MacTahoe";
-    };
-  };
-
-    # monitor fix (hypr)
-    xdg.configFile."hypr/monitors.conf".text = ''
+  # monitor fix (hypr)
+  xdg.configFile."hypr/monitors.conf".text = ''
     monitor = DP-2,3440x1440@239.99,0x0,1,transform,0
-    monitor = DP-3,1920x1080@60,-1080x0,1,transform,1
+    monitor = DP-3,1920x1080@60,-1080x0,-300,transform,1
   '';
 
   # zen-browser
