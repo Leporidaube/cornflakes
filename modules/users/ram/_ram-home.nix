@@ -91,15 +91,15 @@ in
     enable = true;
     enabledCustomApps = with spicePkgs.apps; [
       lyricsPlus
-      {
-        src = pkgs.fetchFromGitHub {
-          owner = "ivLis-Studio";
-          repo = "ivLyrics";
-          rev = "main";
-          hash = "sha256-R/w5YvCp1Yg/BIxbi6RoTAPtL0372hZ+kzYpnCY/Scu=";
-        };
-        name = "ivLyrics";
-      }
+#      {
+#        src = pkgs.fetchFromGitHub {
+#          owner = "ivLis-Studio";
+#          repo = "ivLyrics";
+#          rev = "main";
+#          hash = "sha256-R/w5YvCp1Yg/BIxbi6RoTAPtL0372hZ+kzYpnCY/Scu=";
+#        };
+#        name = "ivLyrics";
+#      }
     ];
 
     enabledExtensions = with spicePkgs.extensions; [
