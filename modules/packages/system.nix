@@ -13,6 +13,7 @@
       vim
       busybox
       alejandra
+      kdePackages.dolphin
     ];
   };
 }
