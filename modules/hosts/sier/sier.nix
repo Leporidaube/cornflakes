@@ -10,16 +10,27 @@
     };
 
     modules = with config.flake.modules.nixos; [
+
+      # host
       ./_hardware-configuration.nix
-      ./_disko.nix
-      inputs.home-manager.nixosModules.default
-      inputs.disko.nixosModules.disko
+      boot
+
       { 
         networking.hostName = "sier";
         system.stateVersion = "25.11";
       }
+
+      # disko
+      ./_disko.nix
+      inputs.disko.nixosModules.disko
+
+      # home manager
+      inputs.home-manager.nixosModules.default
+
+      # user
       ram
-      boot
+
+      # necesities
       store
       audio
       audiofix
@@ -27,11 +38,17 @@
       ethernet
       print
       i18n
+
+      # desktop environment
       hyprland
+      end4
+
+      # packages
       system-packages
       games
       extras
       easyeffects
+
     ];
   };
 }
