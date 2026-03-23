@@ -11,9 +11,9 @@
       wikiman
       yazi
       vim
+      nautilus
       busybox
       alejandra
-      kdePackages.dolphin
     ];
   };
 }
