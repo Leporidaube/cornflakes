@@ -13,6 +13,7 @@
       ./_hardware-configuration.nix
       ./_disko.nix
       inputs.home-manager.nixosModules.default
+      inputs.disko.nixosModules.disko
       { 
         networking.hostName = "sier";
         system.stateVersion = "25.11";
