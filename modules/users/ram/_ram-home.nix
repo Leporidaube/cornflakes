@@ -126,7 +126,6 @@ in
   # personal apps 
   home.packages = with pkgs; [
     vesktop
-    kdePackages.dolphin
     audacious
     audacious-plugins
   ];
