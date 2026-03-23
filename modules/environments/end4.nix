@@ -2,7 +2,7 @@
   
   { ... }:
 {
-  flake.modules.nixos.end4-deps = { pkgs, ... }: {
+  flake.modules.nixos.end4 = { pkgs, ... }: {
     environment.systemPackages = with pkgs; [
     
       # Audio
