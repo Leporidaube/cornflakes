@@ -6,28 +6,18 @@
 in
 {
   imports = [ 
-    inputs.illogical-flake.homeManagerModules.default 
     inputs.zen-browser.homeModules.twilight 
-    inputs.spicetify-nix.homeManagerModules.default ];
+    inputs.spicetify-nix.homeManagerModules.default 
+  ];
 
   home.username = username;
   home.homeDirectory = "/home/${username}";
   home.stateVersion = "25.05";
-  
-  # end4-hypr
-  programs.illogical-impulse = {
-    enable = true;
-    dotfiles = {
-      fish.enable = true;
-      kitty.enable = true;
-      starship.enable = true;
-    };
-  }; 
 
   # monitor fix (hypr)
   xdg.configFile."hypr/monitors.conf".text = ''
     monitor = DP-2,3440x1440@239.99,0x0,1,transform,0
-    monitor = DP-3,1920x1080@60,-1080x-300,transform,1
+    monitor = DP-3,1920x1080@60,-1080x-300,1,transform,1
   '';
 
   # zen-browser
@@ -37,12 +27,12 @@ in
         DisableAppUpdate = true;
         DisableTelemetry = true;
         DisablePocket = true;	
-	DisableFeedbackCommands = true;
+    	DisableFeedbackCommands = true;
         DisableFirefoxStudies = true;
-	AutofillAddressEnabled = true;
+     	AutofillAddressEnabled = true;
         AutofillCreditCardEnabled = false;
         DontCheckDefaultBrowser = true;
-	NoDefaultBookmarks = true;
+	    NoDefaultBookmarks = true;
 
         EnableTrackingProtection = {
           Value = true;
@@ -110,6 +100,7 @@ in
         name = "ivLyrics";
       }
     ];
+
     enabledExtensions = with spicePkgs.extensions; [
       adblock               # adblockify
       wikify                # wikify
@@ -134,21 +125,8 @@ in
     preset = "FFLG"; 
   };
 
-  # starts hyprland session
   programs.bash = {
     enable = true;
-    shellAliases.btw = "I use Nix!";
-    profileExtra = ''
-      if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
-         exec Hyprland
-       fi
-    '';   
-
-    # executes fish
-    initExtra = ''
-      if [[ $- == *i* ]]; then
-        exec fish
-      fi
-    '';
+    shellAliases.hi = "Hiii"; 
   };
 }
