@@ -7,6 +7,7 @@
     environment.systemPackages = with pkgs; [
       wget
       git
+      kitty
       man
       wikiman
       yazi

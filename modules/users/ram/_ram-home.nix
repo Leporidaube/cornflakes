@@ -15,9 +15,22 @@ in
   home.stateVersion = "25.05";
 
   # monitor fix (hypr)
-  xdg.configFile."hypr/monitors.conf".text = ''
+  xdg.configFile."hypr/hyprland.conf".text = ''
+    bind = SUPER, Return, exec, kitty 
+    bind = SUPER, M, exit
+    bind = SUPER, F, fullscreen
+    bind = SUPER, O, togglefloating
+    bind = SUPER, 1, workspace, 1
+    bind = SUPER, 2, workspace, 2
+    bind = SUPER, 3, workspace, 3
+    bind = SUPER, 4, workspace, 4
+    bind = SUPER, 5, workspace, 5
+    bind = SUPER, 6, workspace, 6
+    bind = SUPER, 7, workspace, 7
+    bind = SUPER, 8, workspace, 8
+    bind = SUPER, 9, workspace, 9
     monitor = DP-2,3440x1440@239.99,0x0,1,transform,0
-    monitor = DP-3,1920x1080@60,-1080x-300,1,transform,1
+    monitor = DP-3,1920x1080@60,-1080x-250,1,transform,1
   '';
 
   # zen-browser
@@ -48,14 +61,14 @@ in
         "f4866f39-cfd6-4498-ab92-54213b8279dc"  # Animations+
      	"2317fd93-c3ed-4f37-b55a-304c1816819e"  # Audio inidicators
     	"a6335949-4465-4b71-926c-4a52d34bc9c0"  # Better find bar
-	    "664c54f9-d97d-410b-a479-23dd8a08a628"  # Better tab indicators
+	"664c54f9-d97d-410b-a479-23dd8a08a628"  # Better tab indicators
         "b0f635d7-c3bf-4709-af68-4712f0e5b2e5"  # Cleaner bookmarks
         "181e41d4-dfd3-410d-9a73-561381a2f77d"  # Extensions list
         "253a3a74-0cc4-47b7-8b82-996a64f030d5"  # Floating history
         "906c6915-5677-48ff-9bfc-096a02a72379"  # Floating status bar
         "cb15abdb-0514-4e09-8ce5-722cf1f4a20f"  # Hide extension name
         "803c7895-b39b-458e-84f8-a521f4d7a064"  # Hide inactive workspaces
-	    "e34745fd-2b7f-4c16-b03a-6e29e5c3f20a"  # Hide toolbar
+	"e34745fd-2b7f-4c16-b03a-6e29e5c3f20a"  # Hide toolbar
         "1e86cf37-a127-4f24-b919-d265b5ce29a0"  # Lean
         "ae7868dc-1fa1-469e-8b89-a5edf7ab1f24"  # Load bar
         "4ab93b88-151c-451b-a1b7-a1e0e28fa7f8"  # No sidebar scrollbar
