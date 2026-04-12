@@ -5,15 +5,33 @@
   flake.modules.nixos.system-packages = { pkgs, ... }: {
     nixpkgs.config.allowUnfree = true;
     environment.systemPackages = with pkgs; [
+
+      # Terminal
+      kitty
+      fish
+
+      # Git
       wget
       git
-      kitty
+      curl
+
+      # Manuals
       man
       wikiman
+
+      # Fallback IDE, files
       yazi
       vim
+      
+      # Utilities
       busybox
-      alejandra
+      ripgrep
+      jq
+      uv
+      xdg-user-dirs
+      rsync
+      yq-go
+      gobject-introspection
     ];
   };
 }

@@ -27,7 +27,7 @@
       # home manager
       inputs.home-manager.nixosModules.default
 
-      # user
+      # users
       ram
 
       # necesities
@@ -40,14 +40,14 @@
       i18n
 
       # desktop environment
-      hyprland
-      end4
+      hypr
 
       # packages
       system-packages
       games
       extras
       easyeffects
+      ai
 
     ];
   };

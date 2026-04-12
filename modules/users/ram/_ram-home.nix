@@ -6,7 +6,7 @@
 in
 {
   imports = [ 
-    inputs.zen-browser.homeModules.twilight 
+    inputs.zen-browser.homeModules.beta
     inputs.spicetify-nix.homeManagerModules.default 
   ];
 
@@ -14,7 +14,12 @@ in
   home.homeDirectory = "/home/${username}";
   home.stateVersion = "25.05";
 
-  # monitor fix (hypr)
+  # dotfiles (hyprland)
+  xdg.configFile."hypr/hyprland.conf".source = "${inputs.ramdots}/hyprland.conf";
+  xdg.configFile."hypr/UserConfigs".source = "${inputs.ramdots}/UserConfigs";
+  xdg.configFile."hypr/UserScripts".source = "${inputs.ramdots}/UserScripts";
+
+  # keybinds (hyprland)
   xdg.configFile."hypr/hyprland.conf".text = ''
     bind = SUPER, Return, exec, kitty 
     bind = SUPER, M, exit
@@ -36,6 +41,7 @@ in
   # zen-browser
   programs.zen-browser = {
     enable = true;
+    setAsDefaultBrowser = true;
       policies = {
         DisableAppUpdate = true;
         DisableTelemetry = true;
@@ -123,7 +129,7 @@ in
       shuffle               # shuffle+
       playlistIcons         # playlist icons
       betterGenres          # better spotify genres
-      lastfm                # lastfm stats
+      #lastfm                # lastfm stats
       aiBandBlocker         # ai band blocker
       beautifulLyrics       # beautiful lyrics
       romajiConvert         # convert japanese
@@ -143,5 +149,16 @@ in
   programs.bash = {
     enable = true;
     shellAliases.hi = "Hiii"; 
+    initExtra = ''
+      if [[ $- == *i* ]]; then
+        exec fish
+      fi
+    '';
+  };
+
+  # enable fish 
+  programs.fish = {
+    enable = true;
+    shellAliases.hi = "Hiii";
   };
 }

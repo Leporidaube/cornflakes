@@ -1,0 +1,82 @@
+  # modules/packages/hypr.nix
+  
+  { ... }:
+{
+  flake.modules.nixos.hypr = { pkgs, ... }: {
+    environment.systemPackages = with pkgs; [
+      
+      # Locksreen + idle
+      hyprsunset
+      hypridle
+      hyprlock
+      wlogout # remove after adding logout menu to quickshell
+
+      # Wallpaper, colors
+      matugen
+      swww
+
+      # Screen capture
+      slurp
+      swappy
+      wf-recorder
+      hyprshot
+
+      # OCR
+      tesseract
+
+      # Clipboard
+      wl-clipboard
+      cliphist
+      
+      # Tools
+      wtype
+      ydotool
+      fuzzel
+      imagemagick
+      hyprpicker
+      libqalculate
+
+      # Fonts
+      rubik
+      google-fonts
+      twemoji-color-font
+      material-symbols
+      nerd-fonts.ubuntu
+      nerd-fonts.jetbrains-mono
+
+      # Gnome
+      gnome-keyring
+      nautilus
+      gtk4
+      libadwaita
+
+      # Portals
+      xdg-desktop-portal
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-hyprland
+      
+      # Qt/Quickshell deps
+      qt6.qtbase
+      qt6.qtdeclarative
+      qt6.qt5compat
+      qt6.qtimageformats
+      qt6.qtmultimedia
+      qt6.qtpositioning
+      qt6.qtsvg
+      qt6.qttools
+      qt6.qttranslations
+      qt6.qtvirtualkeyboard
+      qt6.qtwayland
+      kdePackages.kirigami
+      kdePackages.kdialog
+      kdePackages.syntax-highlighting
+    ];
+
+    services.gnome.gnome-keyring.enable = true;
+    services.geoclue2.enable = true;
+    security.polkit.enable = true;
+    xdg.portal.enable = true;
+    programs.dconf.enable = true;
+    programs.hyprland.enable = true;
+  };
+}

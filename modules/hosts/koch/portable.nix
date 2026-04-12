@@ -2,7 +2,11 @@
 
   { ... }: 
 {
-  flake.modules.nixos.portable = { ... }: {
+  flake.modules.nixos.portable = { pkgs, ... }: {
+    environment.systemPackages = with pkgs; [
+      brightnessctl
+      ddcutil
+    ];
 
     # Touchpad support 
     services.libinput.enable = true;

@@ -2,7 +2,15 @@
 
   { ... }: 
 {
-  flake.modules.nixos.audio = { ... }: {
+  flake.modules.nixos.audio = { pkgs, ... }: {
+    environment.systemPackages = with pkgs; [
+      cava
+      wiremix
+      pavucontrol
+      playerctl
+      libdbusmenu-gtk3
+    ];
+
     services.pipewire = {
       enable = true;
       alsa.enable = true;
@@ -20,6 +28,5 @@
 
     # MPRIS
     services.playerctld.enable = true;
-    
   };
 }

@@ -3,7 +3,7 @@
 {
   inputs = {
 
-    nixpkgs.url = "github:NixOS/nixpkgs/9fe1300f4360";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     flake-parts.url = "github:hercules-ci/flake-parts";
 
@@ -17,6 +17,11 @@
     home-manager = {
       url = "github:nix-community/home-manager?ref=release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    ramdots = {
+      url = "github:Leporidaube/ramdots";
+      flake = false;
     };
 
     zen-browser = {
