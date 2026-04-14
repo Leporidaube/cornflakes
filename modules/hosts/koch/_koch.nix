@@ -3,6 +3,12 @@
   { config, inputs, ... }:
 {
   flake.nixosConfigurations.koch = inputs.nixpkgs.lib.nixosSystem {
+
+    specialArgs = {
+      inherit inputs;
+      inherit (inputs.nixpkgs) lib;
+    };
+
     modules = with config.flake.modules.nixos; [
 
       # host
