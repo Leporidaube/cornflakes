@@ -42,12 +42,22 @@
       # desktop environment
       hypr
 
+      # cloud sync
+      syncthing
+
+      # sandbox
+      vm
+      ai
+
       # packages
       system-packages
       games
-      extras
+      vr
+      art
+      media
       easyeffects
-      ai
+      waydroid
+      emacs
 
     ];
   };

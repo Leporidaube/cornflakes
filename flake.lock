@@ -108,11 +108,11 @@
     "ramdots": {
       "flake": false,
       "locked": {
-        "lastModified": 1775978431,
-        "narHash": "sha256-X33taE87gM2gIFmg16nJg3tb9tZur21b1ntcJa8MOtk=",
+        "lastModified": 1776069765,
+        "narHash": "sha256-hToXnr6omJoZQct2PECVbnTjEU9WlO/i8HDth3Vqf5s=",
         "owner": "Leporidaube",
         "repo": "ramdots",
-        "rev": "1f1b3d4d6a84684f19a5a6ed9a8ab9f76a32bf7c",
+        "rev": "042e7843358d688695ac652d33ec396414839d3a",
         "type": "github"
       },
       "original": {

@@ -99,6 +99,7 @@ in
   # personal apps 
   home.packages = with pkgs; [
     vesktop
+    obsidian
     audacious
     audacious-plugins
   ];
@@ -148,9 +149,14 @@ in
   # enable bash + add easter egg :D
   programs.bash = {
     enable = true;
-    shellAliases.hi = "Hiii"; 
+    shellAliases.hi = "Hiii";
+    profileExtra = ''
+      if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" = "1" ]; then
+        exec Hyprland
+      fi
+    '';
     initExtra = ''
-      if [[ $- == *i* ]]; then
+      if [[ $- == *i* ]] && [[ -z "$IN_NIX_SHELL" ]]; then
         exec fish
       fi
     '';

@@ -20,8 +20,9 @@
       wikiman
 
       # Fallback IDE, files
-      yazi
       vim
+      yazi
+      zathura
       
       # Utilities
       busybox

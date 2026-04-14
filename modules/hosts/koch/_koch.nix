@@ -2,7 +2,7 @@
 
   { config, inputs, ... }:
 {
-  flake.nixosConfigurations.sier = inputs.nixpkgs.lib.nixosSystem {
+  flake.nixosConfigurations.koch = inputs.nixpkgs.lib.nixosSystem {
     modules = with config.flake.modules.nixos; [
 
       # host
@@ -34,13 +34,20 @@
       i18n
 
       # desktop environment
-      hyprland
-      end4
+      hypr
+
+      # cloud sync
+      syncthing 
+
+      # sandbox
+      vm
+      ai
 
       # packages
       system-packages
       games
-      extras
+      waydroid
+      emacs
 
     ];
   };
