@@ -1,6 +1,6 @@
-  # modules/hosts/koch/_disko.nix
+# modules/hosts/koch/_disko.nix
 
-  { ... }:
+{ ... }:
 {
   disko.devices = {
     disk.main = {
@@ -19,13 +19,13 @@
             };
           };
           swap = {
-            size = "16G";
+            size = "32G";
             content = {
               type = "swap";
             };
           };
           root = {
-            size = "686G";
+            size = "1430G";  # ~1.76TB - 32G - 1G - 300G unallocated
             content = {
               type = "filesystem";
               format = "btrfs";
