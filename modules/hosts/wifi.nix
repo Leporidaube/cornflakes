@@ -8,8 +8,10 @@
       impala
     ];
 
-    networking.useDHCP = true;
     networking.networkmanager.enable = true;
-    networking.wireless.iwd.enable = true;   
+    networking.networkmanager.wifi.backend = "iwd";
+    
+    networking.wireless.enable = false;
+    networking.useDHCP = false;
   };
 }
