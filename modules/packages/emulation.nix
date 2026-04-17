@@ -5,7 +5,7 @@
     flake.modules.nixos.emulation = { ... }: {      
 
       # Eden (switch)
-      imports = [ eden.nixosModules.default ];
+      imports = [ inputs.eden.nixosModules.default ];
       programs.eden.enable = true;
 
     };
