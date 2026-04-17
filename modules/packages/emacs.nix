@@ -23,6 +23,12 @@
         aspell                    
         aspellDicts.en
         imagemagick               
+        jq
+        uv
+        xdg-user-dirs
+        rsync
+        yq-go
+        gobject-introspection
       ];
     };
   }

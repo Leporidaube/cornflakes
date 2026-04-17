@@ -53,6 +53,7 @@
       system-packages
       games
       waydroid
+      emulation
       emacs
 
     ];

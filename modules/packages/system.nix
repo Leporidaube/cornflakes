@@ -9,6 +9,7 @@
       # Terminal
       kitty
       fish
+      fastfetch
 
       # Git
       wget
@@ -25,14 +26,11 @@
       zathura
       
       # Utilities
-      busybox
-      ripgrep
-      jq
-      uv
-      xdg-user-dirs
-      rsync
-      yq-go
-      gobject-introspection
+      busybox # zip files
+      udiskie # automount
+      ripgrep # search on steroids
+      ripgrep-all # and on stims too
+      imagemagick # pretty pictures
     ];
   };
 }

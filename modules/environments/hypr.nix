@@ -7,8 +7,8 @@
       
       # Locksreen + idle
       hyprsunset
-      hypridle
       hyprlock
+      hypridle
       wlogout # remove after adding logout menu to quickshell
 
       # Wallpaper, colors
@@ -24,8 +24,12 @@
       # OCR
       tesseract
 
+      # Notifications
+      swaynotificationcenter
+
       # Clipboard
       wl-clipboard
+      wl-clip-persist
       cliphist
       
       # Tools

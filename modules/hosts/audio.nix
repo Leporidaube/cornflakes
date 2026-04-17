@@ -7,6 +7,7 @@
       cava
       wiremix
       pavucontrol
+      wpctl
       playerctl
       libdbusmenu-gtk3
     ];
