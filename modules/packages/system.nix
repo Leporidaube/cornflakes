@@ -3,7 +3,14 @@
   { ... }:
 {
   flake.modules.nixos.system-packages = { pkgs, ... }: {
+
+    # enable appimage support
+    programs.appimage.enable = true;
+    programs.appimage.binfmt = true;
+
+    # allow unfree packages
     nixpkgs.config.allowUnfree = true;
+
     environment.systemPackages = with pkgs; [
 
       # Terminal
@@ -31,6 +38,7 @@
       ripgrep # search on steroids
       ripgrep-all # and on stims too
       imagemagick # pretty pictures
+
     ];
   };
 }

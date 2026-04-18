@@ -15,28 +15,29 @@ in
   home.stateVersion = "25.05";
 
   # dotfiles (hyprland)
-  xdg.configFile."hypr/hyprland.conf".source = "${inputs.ramdots}/hyprland.conf";
-  xdg.configFile."hypr/UserConfigs".source = "${inputs.ramdots}/UserConfigs";
-  xdg.configFile."hypr/UserScripts".source = "${inputs.ramdots}/UserScripts";
+# xdg.configFile."hypr/hyprland.conf".source = "${inputs.ramdots}/hyprland.conf";
+# xdg.configFile."hypr/UserConfigs".source = "${inputs.ramdots}/UserConfigs";
+# xdg.configFile."hypr/UserScripts".source = "${inputs.ramdots}/UserScripts";
 
-  # keybinds (hyprland)
-  xdg.configFile."hypr/hyprland.conf".text = ''
-    bind = SUPER, Return, exec, kitty 
-    bind = SUPER, M, exit
-    bind = SUPER, F, fullscreen
-    bind = SUPER, O, togglefloating
-    bind = SUPER, 1, workspace, 1
-    bind = SUPER, 2, workspace, 2
-    bind = SUPER, 3, workspace, 3
-    bind = SUPER, 4, workspace, 4
-    bind = SUPER, 5, workspace, 5
-    bind = SUPER, 6, workspace, 6
-    bind = SUPER, 7, workspace, 7
-    bind = SUPER, 8, workspace, 8
-    bind = SUPER, 9, workspace, 9
-    monitor = DP-2,3440x1440@239.99,0x0,1,transform,0
-    monitor = DP-3,1920x1080@60,-1080x-250,1,transform,1
-  '';
+#  # keybinds (hyprland)
+#  xdg.configFile."hypr/hyprland.conf".text = ''
+#    bind = SUPER, Return, exec, kitty 
+#    bind = SUPER, M, exit
+#    bind = SUPER, F, fullscreen
+#    bind = SUPER, O, togglefloating
+#    bind = SUPER, 1, workspace, 1
+#    bind = SUPER, 2, workspace, 2
+#    bind = SUPER, 3, workspace, 3
+#    bind = SUPER, 4, workspace, 4
+#    bind = SUPER, 5, workspace, 5
+#    bind = SUPER, 6, workspace, 6
+#    bind = SUPER, 7, workspace, 7
+#    bind = SUPER, 8, workspace, 8
+#    bind = SUPER, 9, workspace, 9
+#    monitor = DP-2,3440x1440@239.99,0x0,1,transform,0
+#    monitor = DP-3,1920x1080@60,-1080x-250,1,transform,1
+#  '';
+#
 
   # zen-browser
   programs.zen-browser = {

@@ -18,6 +18,11 @@
       url = "github:nix-community/home-manager?ref=release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+#    ramdots = {
+#      url = "github:Leporidaube/ramdots";
+#      flake = false;
+#     };
 
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";

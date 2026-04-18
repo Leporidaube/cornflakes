@@ -9,12 +9,12 @@
 
     hardware = {
       bluetooth.enable = true;
+      bluetooth.powerOnBoot = true;
       bluetooth.settings = {
         General = {
-          Experimental = false;
+          Enable = "Source,Sink,Media"; 
         };
       };
     };
-
   };
 }
