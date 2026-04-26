@@ -18,10 +18,11 @@
       fish
       fastfetch
 
-      # Git
+      # Downloads
       wget
       git
       curl
+      stow
 
       # Manuals
       man

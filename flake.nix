@@ -19,11 +19,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
-    ramdots = {
-      url = "github:burmeral/ramdots";
-      flake = false;
-     };
-
     jovian = {
       url = "github:Jovian-Experiments/Jovian-NixOS";
       inputs.nixpkgs.follows = "nixpkgs";

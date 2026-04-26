@@ -5,7 +5,6 @@
   let username = "ram"; in
 {
   imports = [
-    ./_hyprconf.nix
     ./_shell.nix
     ./_spicetify.nix
     ./_zen.nix
