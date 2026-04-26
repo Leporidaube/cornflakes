@@ -19,10 +19,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
-#    ramdots = {
-#      url = "github:Leporidaube/ramdots";
-#      flake = false;
-#     };
+    ramdots = {
+      url = "github:burmeral/ramdots";
+      flake = false;
+     };
+
+    jovian = {
+      url = "github:Jovian-Experiments/Jovian-NixOS";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";

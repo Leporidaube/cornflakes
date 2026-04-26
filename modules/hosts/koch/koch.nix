@@ -1,8 +1,8 @@
-# modules/hosts/deck/deck.nix
+  # modules/hosts/koch/koch.nix
 
   { config, inputs, ... }:
 {
-  flake.nixosConfigurations.deck = inputs.nixpkgs.lib.nixosSystem {
+  flake.nixosConfigurations.koch = inputs.nixpkgs.lib.nixosSystem {
 
     specialArgs = {
       inherit inputs;
@@ -16,18 +16,8 @@
       boot
 
       { 
-        networking.hostName = "deck";
+        networking.hostName = "koch";
         system.stateVersion = "25.11";
-
-        jovian = {
-          devices.steamdeck.enable = true;
-          steam = {
-            enable = true;
-            autoStart = true;
-            user = "ram";
-            desktopSession = "hyprland";
-          };
-        };
       }
 
       # disko
@@ -37,10 +27,8 @@
       # home manager
       inputs.home-manager.nixosModules.default
 
-      # user
-      ram
-
       # necesities
+      users
       store
       audio           
       bluetooth
@@ -55,12 +43,17 @@
       # cloud sync
       syncthing 
 
+      # sandbox
+      vm
+      ai
+
       # packages
       system-packages
+      art
       games
       waydroid
       emulation
-      emacs   
+      emacs
 
     ];
   };

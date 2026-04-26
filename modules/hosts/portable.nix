@@ -15,7 +15,7 @@
     services.upower.enable = true;
 
     # Suspend
-    services.logind.lidSwitch = "suspend";
+    services.logind.settings.Login.HandleLidSwitch = "suspend";
     powerManagement.enable = true;
   };
 }

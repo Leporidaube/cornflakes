@@ -40,6 +40,9 @@
       hyprpicker
       libqalculate
 
+      # Plugins
+      hyprcursor
+
       # Fonts
       rubik
       google-fonts
