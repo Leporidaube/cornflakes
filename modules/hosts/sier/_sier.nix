@@ -37,7 +37,7 @@
       bluetooth
       ethernet
       print
-      i18n
+      intl
 
       # desktop environment
       hypr

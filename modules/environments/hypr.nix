@@ -53,7 +53,6 @@
 
       # Gnome
       gnome-keyring
-      nautilus
       gtk4
       libadwaita
 

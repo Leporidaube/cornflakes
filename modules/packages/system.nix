@@ -32,6 +32,7 @@
       vim
       yazi
       zathura
+      xfce.thunar
       
       # Utilities
       busybox # zip files

@@ -50,7 +50,7 @@
       wifi 
       print
       portable
-      i18n
+      intl
 
       # desktop environment
       hypr

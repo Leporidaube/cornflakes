@@ -10,9 +10,8 @@
       gamescopeSession.enable = true;
     };
 
-    # Lutris
+    # Packages
     environment.systemPackages = with pkgs; [
-      lutris
       gamemode
     ];
 
