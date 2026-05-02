@@ -62,6 +62,7 @@
       xdg-desktop-portal-hyprland
       
       # Qt/Quickshell deps
+      quickshell
       qt6.qtbase
       qt6.qtdeclarative
       qt6.qt5compat

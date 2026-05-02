@@ -32,7 +32,7 @@
       vim
       yazi
       zathura
-      xfce.thunar
+      kdePackages.dolphin
       
       # Utilities
       busybox # zip files
