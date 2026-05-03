@@ -32,7 +32,7 @@
       vim
       yazi
       zathura
-      kdePackages.dolphin
+      nautilus
       
       # Utilities
       busybox # zip files

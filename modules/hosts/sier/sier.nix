@@ -27,10 +27,8 @@
       # home manager
       inputs.home-manager.nixosModules.default
 
-      # users
-      ram
-
       # necesities
+      users
       store
       audio
       audiofix
@@ -47,7 +45,6 @@
 
       # sandbox
       vm
-      ai
 
       # packages
       system-packages
