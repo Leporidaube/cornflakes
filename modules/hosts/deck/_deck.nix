@@ -40,10 +40,8 @@
       # home manager
       inputs.home-manager.nixosModules.default
 
-      # user
-      ram
-
       # necesities
+      users
       store
       audio           
       bluetooth
@@ -61,6 +59,7 @@
       # packages
       system-packages
       games
+      wine
       waydroid
       emulation
       emacs   

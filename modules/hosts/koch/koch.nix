@@ -45,12 +45,12 @@
 
       # sandbox
       vm
-      ai
 
       # packages
       system-packages
       art
       games
+      wine
       waydroid
       emulation
       emacs

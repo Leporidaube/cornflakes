@@ -52,9 +52,10 @@
       vr
       art
       media
-      easyeffects
+      wine
       waydroid
       emacs
+      easyeffects
 
     ];
   };
