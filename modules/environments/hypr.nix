@@ -1,6 +1,6 @@
   # modules/packages/hypr.nix
   
-  { ... }:
+  { inputs, ... }:
 {
   flake.modules.nixos.hypr = { pkgs, ... }: {
     environment.systemPackages = with pkgs; [
@@ -12,7 +12,7 @@
       wlogout # remove after adding logout menu to quickshell
 
       # Wallpaper, colors
-      matugen
+      inputs.matugen.packages.${pkgs.system}.default
       swww
 
       # Screen capture

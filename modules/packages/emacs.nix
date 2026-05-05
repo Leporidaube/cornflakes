@@ -13,6 +13,8 @@
         ripgrep
         fd
         findutils
+        multimarkdown
+        shellcheck
 
         # Language tooling 
         nodejs  # for some Doom modules
@@ -29,6 +31,9 @@
         rsync
         yq-go
         gobject-introspection
+
+        # Just in case
+        (emacs.override { withNativeCompilation = true; })
       ];
     };
   }
