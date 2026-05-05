@@ -22,10 +22,6 @@
   programs.fish = {
     enable = true;
 
-    interactiveShellInit = ''
-      set -g fish_greeting ""
-    '';
-
     shellInitLast = ''
       fish_add_path ~/.config/emacs/bin
     '';
@@ -42,18 +38,27 @@
       }
     ];
 
-    fish_prompt = ''
+    interactiveShellInit = ''
+
+      set -g fish_greeting ""
+
       set -l cwd (prompt_pwd --full-length-dirs 1)
       set -l git_branch (git branch --show-current 2>/dev/null)
       set -l user (whoami)
 
-      echo -n (set_color --bold cyan)$user(set_color normal)
-      echo -n " λ "
-      echo -n (set_color blue)$cwd(set_color normal)
-      if test -n "$git_branch"
-      echo -n (set_color yellow)" [ $git_branch ]"(set_color normal)
+      function fish_prompt
+        set -l cwd (prompt_pwd --full-length-dirs 1)
+        set -l git_branch (git branch --show-current 2>/dev/null)
+        set -l user (whoami)
+
+        echo -n (set_color --bold cyan)$user(set_color normal)
+        echo -n " λ "
+        echo -n (set_color blue)$cwd(set_color normal)
+        if test -n "$git_branch"
+          echo -n (set_color yellow)" [ $git_branch ]"(set_color normal)
+        end
+        echo -n " : "
       end
-      echo -n " : "
     '';
   };
 }
