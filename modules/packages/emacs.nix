@@ -31,8 +31,15 @@
         rsync
         yq-go
         gobject-introspection
+        cmake
+        gnumake
+        graphviz
+        cmigemo
+        pipenv
+        isort        # python import sorting
+        python3Packages.pytest    # python testing
 
-        # Just in case
+        # Native comp
         (emacs.override { withNativeCompilation = true; })
       ];
     };

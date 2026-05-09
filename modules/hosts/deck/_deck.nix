@@ -59,6 +59,8 @@
       # packages
       system-packages
       games
+      media
+      music
       wine
       waydroid
       emulation

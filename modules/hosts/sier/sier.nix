@@ -1,8 +1,8 @@
-  # modules/hosts/koch/koch.nix
+  # modules/hosts/sier/sier.nix
 
   { config, inputs, ... }:
 {
-  flake.nixosConfigurations.koch = inputs.nixpkgs.lib.nixosSystem {
+  flake.nixosConfigurations.sier = inputs.nixpkgs.lib.nixosSystem {
 
     specialArgs = {
       inherit inputs;
@@ -16,7 +16,7 @@
       boot
 
       { 
-        networking.hostName = "koch";
+        networking.hostName = "sier";
         system.stateVersion = "25.11";
       }
 
@@ -30,30 +30,33 @@
       # necesities
       users
       store
-      audio           
+      audio
+      audiofix
       bluetooth
-      wifi 
+      ethernet
       print
-      portable
       intl
 
       # desktop environment
       hypr
 
       # cloud sync
-      syncthing 
+      syncthing
 
       # sandbox
       vm
 
       # packages
       system-packages
-      art
       games
+      vr
+      art
+      media
+      music
       wine
       waydroid
-      emulation
       emacs
+      easyeffects
 
     ];
   };
