@@ -20,9 +20,7 @@
         nodejs  # for some Doom modules
         python3
         gcc     # for native compilation
-
-        # Misc
-        aspell                    
+        aspell
         aspellDicts.en
         imagemagick               
         jq
@@ -33,6 +31,7 @@
         gobject-introspection
         cmake
         gnumake
+        libtool
         graphviz
         cmigemo
         pipenv

@@ -40,6 +40,7 @@
       ripgrep # search on steroids
       ripgrep-all # and on stims too
       imagemagick # pretty pictures
+      btop  # process tui
 
     ];
   };
